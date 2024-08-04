@@ -1,1 +1,364 @@
-test
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Not a Virus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            color: #00FF00;
+            font-family: monospace;
+
+        }
+
+        a {
+            color: #00FF00;
+        }
+
+        #countdown {
+            font-size: 30px;
+
+        }
+
+        .typing-effect {
+            font-family: monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid black;
+            animation: blink-caret .75s step-end infinite;
+        }
+
+        .bigger {
+            font-size: 40px;
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+
+        #typing4 {
+
+            text-align: center;
+
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body style="background-color:black;">
+
+    <div class="container-fluid">
+        <div class="col-12">
+            <!-- countdown to August 28 2024 GMT +2 (summertime) -->
+            <h1 class="bigger">Party Time</h1>
+            <p id="countdown">...</p>
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Aug 28, 2024 00:00:00 GMT+0200").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function () {
+
+                    // Get today's date and time
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result in the element with id="demo"
+                    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdown").innerHTML = "YAY.";
+                    }
+                }, 1000);
+            </script>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-12">
+            <h1 id="typing1"></h1>
+            <h1 id="typing2"></h1>
+            <h1 id="typing3"></h1>
+            <h1 id="typing4"></h1>
+            <div id="breaks">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="videos" class="container-fluid ">
+        <div class="col-12">
+            <h1>
+                Watch me.
+            </h1>
+            <video controls class="" src="video.mp4"></video>
+
+        </div>
+    </div>
+    <div id="slideshow">
+        <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide p-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="1.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="2.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="3.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="4.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="5.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="6.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="8.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <video muted controls src="7.mp4"></video>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="prez">
+        <div class="col-12">
+            <h1 class="mb-3">
+                &nbsp;+ one special present.
+            </h1>
+
+        </div>
+    </div>
+
+    <script>
+        // make .appear elements appear one by one
+        var appear = document.querySelectorAll('.appear');
+        var i = 1;
+        setInterval(function () {
+            if (i < appear.length) {
+                appear[i].classList.remove('d-none');
+                // add d-none to previous element
+                if (i > 0) {
+                    appear[i - 1].classList.add('d-none');
+                    // make it show as it is being typed
+                    appear[i].classList.add('scramble');
+                }
+                i++;
+            }
+        }, 2000);
+
+    </script>
+
+    <div class="container-fluid">
+        <div class="col-12">
+            <h1 id="wait_message">
+                You must wait little boy.
+            </h1>
+
+            <div class="" style="text-align:center;">
+                <H1 id="countdown2">...</H1>
+                <button id="unlock" class="btn btn-secondary">Unlock</button>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate2 = new Date("Aug 3, 2024 00:00:00 GMT+0200").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance2 = countDownDate2 - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+            var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown2").innerHTML = days2 + "d " + hours2 + "h "
+                + minutes2 + "m " + seconds2 + "s ";
+
+            // If the count down is finished, write some text
+            if (distance2 < 0) {
+                clearInterval(x);
+                document.getElementById("countdown2").innerHTML = "IT'S TIME.";
+                document.getElementById("wait_message").innerHTML = "";
+            }
+        }, 1000);
+    </script>
+
+    <div class="container-fluid d-none" id="show_me">
+        <div class="col-12">
+            <!-- show this after August 28 2024 GMT +2 (summertime) -->
+            <h1>I hope you had the happiest of birthdays.</h1>
+            <h1>Let's review what you got.</h1>
+            <img class="img-fluid" src="gift.jpeg" alt="">
+            <h1>A stunning personally designed sweater</h1>
+            <br>
+            <div style="text-align: center">
+                <h1>
+                    AND
+                </h1>
+            </div>
+            <br>
+            <h1>
+                A picnic, planned and prepared, by yours truly.
+            </h1>
+            <br>
+            <h1>
+                And now we watch the final countdown. Just a few more days. No biggie.
+            </h1>
+            <br>
+            <h1>
+                A little something something while you <a target="_blank" href="https://www.youtube.com/watch?v=U-jXMeo4a4k">wait</a>.
+            </h1>
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var showDate4 = new Date("Aug 3, 2024 00:00:00 GMT+0200").getTime();
+
+        // unlock button - when clicked, if the date is past, show the show_me div, else alert
+        document.getElementById("unlock").addEventListener("click", function () {
+            var now = new Date().getTime();
+            var distance3 = now - showDate4;
+            if (distance3 > 0) {
+                // remove d-none    
+                document.getElementById("show_me").classList.remove("d-none");
+                // scroll to bottom
+                window.scrollTo(0, document.body.scrollHeight);
+
+            } else {
+                alert("You must wait little boy.");
+            }
+        });
+
+
+        const text1 = "H3y h0tn355.";
+        const text2 = "H4ppy b1rthd4y.";
+        const text3 = "N0w l3t'5 g3t th15 p4rty 5t4rted, 5h4ll w3?";
+
+        const speed = 20; // Adjust the speed of typing here
+        const text4 = "↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>";
+
+        function type(text, elementId) {
+            let index = 0;
+            const element = document.getElementById(elementId);
+            const textArray = text.split('<br>');
+            let lineIndex = 0;
+
+            function typing() {
+                if (lineIndex < textArray.length) {
+                    if (index < textArray[lineIndex].length) {
+                        element.innerHTML += textArray[lineIndex].charAt(index);
+                        index++;
+                    } else {
+                        element.innerHTML += '<br>';
+                        index = 0;
+                        lineIndex++;
+                    }
+                    setTimeout(typing, speed);
+                } else {
+                    // After typing the text, delete it
+                    if (element.id !== "typing4") {
+                        setTimeout(() => deleteText(element), speed);
+                    } else {
+                        // Show the videos
+                        //document.getElementById("videos").classList.remove("d-none");
+                        // clear breaks
+                        document.getElementById("breaks").innerHTML = '';
+                    }
+                }
+            }
+
+            typing();
+        }
+
+        function deleteText(element) {
+            let text = element.textContent;
+            function deleting() {
+                if (text.length > 0) {
+                    text = text.slice(0, -1);
+                    element.textContent = text;
+                    setTimeout(deleting, speed);
+                } else {
+                    // After deleting the text, type the next text
+                    if (element.id === "typing1") {
+                        type(text2, "typing2");
+                    } else if (element.id === "typing2") {
+                        type(text3, "typing3");
+                    } else if (element.id === "typing3") {
+                        type(text4, "typing4");
+                    }
+                }
+            }
+
+            deleting();
+        }
+
+        window.onload = function () {
+            // Start by typing the first text
+            type(text1, "typing1");
+        }
+
+
+    </script>
+</body>
+
+</html>

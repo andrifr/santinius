@@ -126,7 +126,7 @@
     </div>
     <div id="slideshow">
         <div class="col-12">
-            <div id="carouselExampleControls" class="carousel slide p-5" data-bs-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide p-5" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="1.jpeg" class="d-block w-100" alt="...">
@@ -212,7 +212,7 @@
 
     <script>
         // Set the date we're counting down to
-        var countDownDate2 = new Date("Aug 3, 2024 00:00:00 GMT+0200").getTime();
+        var countDownDate2 = new Date("Aug 13, 2024 00:00:00 GMT+0200").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
@@ -272,7 +272,7 @@
 
     <script>
         // Set the date we're counting down to
-        var showDate4 = new Date("Aug 3, 2024 00:00:00 GMT+0200").getTime();
+        var showDate4 = new Date("Aug 13, 2024 00:00:00 GMT+0200").getTime();
 
         // unlock button - when clicked, if the date is past, show the show_me div, else alert
         document.getElementById("unlock").addEventListener("click", function () {
@@ -282,7 +282,7 @@
                 // remove d-none    
                 document.getElementById("show_me").classList.remove("d-none");
                 // scroll down 50 pixels
-                window.scrollBy(0, 50);
+                window.scrollBy(0, 200);
 
             } else {
                 alert("You must wait little boy.");
@@ -294,7 +294,7 @@
         const text2 = "H4ppy b1rthd4y.";
         const text3 = "N0w l3t'5 g3t th15 p4rty 5t4rted, 5h4ll w3?";
 
-        const speed = 20; // Adjust the speed of typing here
+        const speed = 60; // Adjust the speed of typing here
         const text4 = "↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>";
 
         function type(text, elementId) {
